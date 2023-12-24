@@ -18,17 +18,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="33">
+        <activity
+            android:name=".FileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recycleviewActivity"
+            android:exported="false" />
+
         <receiver
-            android:name=".MyReceiver2"
+            android:name=".MyReceiver"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true" />
 
         <activity
             android:name=".MusicActivity"
             android:exported="false" />
 
         <receiver
-            android:name=".MyReceiver"
+            android:name=".MyReceiver2"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

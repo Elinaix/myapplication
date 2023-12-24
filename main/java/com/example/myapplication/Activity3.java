@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Activity3 extends AppCompatActivity {
 
-    Button button3;
+    Button button3,button5,button6;
     TextView textView,textView1;
 
     @SuppressLint("MissingInflatedId")
@@ -25,6 +25,8 @@ public class Activity3 extends AppCompatActivity {
         textView1=findViewById(R.id.textView13);
 
         button3=findViewById(R.id.button3);
+        button5=findViewById(R.id.button5);
+        button6=findViewById(R.id.button6);
         Intent intent=getIntent();
         String str1=intent.getExtras().getString("name");
         textView.setText(str1);
@@ -37,54 +39,71 @@ public class Activity3 extends AppCompatActivity {
                 finish();
             }
         });
-        Log.d("xr","3:onCreate...");//调试页面显示
+        Log.d("xl","3:onCreate...");//调试页面显示
+
+        //连接到Service——普通方式连接
+        Intent intent1=new Intent(Activity3.this,MyService1.class);
+        //音乐播放
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startService(intent1);
+            }
+        });
+        //音乐停止
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stopService(intent1);
+            }
+        });
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        Log.d("xr","3:onPause...");
+        Log.d("xl","3:onPause...");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
 
-        Log.d("xr","3:onDestroy...");
+        Log.d("xl","3:onDestroy...");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
 
-        Log.d("xr","3:onStop...");
+        Log.d("xl","3:onStop...");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
 
-        Log.d("xr","3:onRestart...");
+        Log.d("xl","3:onRestart...");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        Log.d("xr","3:onResume...");
+        Log.d("xl","3:onResume...");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        Log.d("xr","3:onStart...");
+        Log.d("xl","3:onStart...");
     }
 
     @Override
     protected void onPostResume() {
         super.onPostResume();
-        Log.d("xr","3:onPostResume...");
+        Log.d("xl","3:onPostResume...");
     }
 }

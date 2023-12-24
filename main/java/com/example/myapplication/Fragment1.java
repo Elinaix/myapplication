@@ -45,8 +45,6 @@ import java.util.List;
         @SuppressLint("MissingInflatedId")
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-
             View view=inflater.inflate(R.layout.tab1, container, false);
 
             recyclerView = view.findViewById(R.id.RecyclerView);

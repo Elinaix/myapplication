@@ -16,14 +16,14 @@ public class MyService1 extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d("xr","Mysevice1:onCreate....");
+        Log.d("xl","Mysevice1:onCreate....");
         player= MediaPlayer.create(this,R.raw.music);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         player.start();
-        Log.d("xr","Mysevice1:onStartCommand....");
+        Log.d("xl","Mysevice1:onStartCommand....");
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -32,7 +32,7 @@ public class MyService1 extends Service {
         player.stop();
         player.release();
         super.onDestroy();
-        Log.d("xr","Mysevice1:onDestroy....");
+        Log.d("xl","Mysevice1:onDestroy....");
     }
 
     @Override

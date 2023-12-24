@@ -72,6 +72,17 @@ public class Activity1 extends AppCompatActivity {
         });
 
         Log.d("xr","onCreate...");//调试页面显示
+
+        /*Activity2
+        Intent intent=getIntent();
+        //String str=intent.getStringExtra("name")+"-"
+        //        +intent.getStringExtra("age");
+        String str2=intent.getExtras().getString("name")+"-"+"\n"
+                +intent.getExtras().getString("author");
+
+        textView.setText(str2);
+
+        Log.d("xr","2:onCreate...");//调试页面显示*/
     }
 
     @Override

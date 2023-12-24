@@ -17,14 +17,14 @@ public class MyService2 extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d("xr","Mysevice2:onCreate....");
+        Log.d("xl","Mysevice2:onCreate....");
         player= MediaPlayer.create(this,R.raw.music);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         //player.start();
-        Log.d("xr","Mysevice2:onStartCommand....");
+        Log.d("xl","Mysevice2:onStartCommand....");
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -33,13 +33,13 @@ public class MyService2 extends Service {
         player.stop();
         player.release();
         super.onDestroy();
-        Log.d("xr","Mysevice2:onDestroy....");
+        Log.d("xl","Mysevice2:onDestroy....");
     }
 
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
-        Log.d("xr","Mysevice2:onBind....");
+        Log.d("xl","Mysevice2:onBind....");
         MyBinder myBinder=new MyBinder();
         return  myBinder;
         //抛出异常throw new UnsupportedOperationException("Not yet implemented");
@@ -51,7 +51,7 @@ public class MyService2 extends Service {
         }
         public void Todo(){
             player.start();
-            Log.d("xr","Mysevice2:Todo....");
+            Log.d("xl","Mysevice2:Todo....");
         }
 
     }

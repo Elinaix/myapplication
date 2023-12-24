@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout_file"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#D52323"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/filetextView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="序号"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/filetextView11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="歌曲名"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/filetextView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="歌手"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="28sp" />
+
+</LinearLayout>
